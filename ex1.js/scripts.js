@@ -62,4 +62,92 @@ if(idade < 16){
 
 //exercicio 8-ano bissexto 
 let ano = prompt("digite um ano");
-if
+if (ano % 4 == 0){
+    console.log("o ano é bissexto");
+}else{
+    console.log("o ano não é bissexto");
+
+}
+
+//Exercicio 9- alistamento militar
+let nascimenrto = prompt("digite o ano de nascimento");
+let idadeAlistamento = 2026 - nascimenrto;
+
+if(idadeAlistamento < 18){
+    console.log("você ainda não precisa se alistar");
+}else if(idadeAlistamento == 18){
+    console.log("é hora de se alistar, gracinha");
+}else{
+    console.log("você já deveria ter se alistado, ta esperando oque?");
+}
+
+//exercicio 10- saldo de conta
+let conta = prompt("numero da conta");
+let saldo = prompt("saldo da conta");
+let debito = prompt("debito");
+let credito = prompt("credito");
+let saldoatual = saldo - debito + credito;
+
+console.log("o saldo atual da conta é" + saldoatual);
+
+if(saldoatual >= 0){
+    console.log("saldo positivo");
+}else{
+    console.log("saldo negativo");
+}
+
+//exercicio 11- numeros de 1 a 10 (crescente)
+
+for (let i = 1; i <= 10; i++){
+    console.log(i);
+}
+
+//exercicio 12- numeros de 10 a 1 (decrescente)
+for (let i = 10; i >= 1; i--){
+    console.log(i);
+}
+
+//exercicio 13- 10 primeiros numeros maiores que 100
+for (let i = 101; i <= 110; i++){
+    console.log(i);
+}
+
+//exercicio 14- media da turma 
+let alunos = Number(prompt("quantos alunos tem na turma?"));
+let soma = 0;
+
+for (let i = 1; i <= alunos; i++){
+    let nota = Number(prompt("digite a nota do aluno " + i));
+    soma = soma + nota;
+}
+
+let media = soma / alunos;
+console.log("a média da turma é" + media);
+
+//exercicio 15- somar 10 numeros 
+let soma15 = 0;
+for (let i = 1; i <= 10; i++){
+    let numero = Number(prompt("digite o numero " + i));
+    soma15 = soma15 + numero;
+}
+console.log("a soma dos numeros é" + soma15);
+
+//exercicio 16- somar apenas numeros menores que 40
+let soma16 = 0;
+for (let i = 1; i <= 10; i++){
+    let numero = Number(prompt("digite o numero " + i));
+    if(numero < 40){
+        soma16 = soma16 + numero;
+    }
+}
+console.log("a soma dos numeros menores que 40 é" + soma16);
+
+//exercicio 17- soma entre dois valores
+let valor1 = Number(prompt("digite o primeiro valor"));
+let valor2 = Number(prompt("digite o segundo valor"));
+
+let soma17 = 0;
+for (let i = valor1; i <= valor2; i++){
+    soma17 = soma17 + i;
+}
+console.log("a soma entre os valores é" + soma17);
