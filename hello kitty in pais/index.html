@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Kitty no País das Maravilhas</title>
+    <style>
+
+        :root {
+            --kitty-pink-light: #ffeff5;
+            --kitty-pink-main: #ff85a2;
+            --kitty-red: #ff0044;
+            --text-dark: #4a4a4a;
+            --white: #ffffff;
+            --kitty-yellow: #fff066;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+            background-color: var(--kitty-pink-light);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+        #capa {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #ff85a2 0%, #ffeff5 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.6s ease;
+        }
+
+        .conteudo-capa {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 30px;
+            border: 5px solid var(--kitty-red);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            max-width: 350px; 
+            width: 90%;
+        }
+
+        .conteudo-capa img {
+            width: 100%;
+            max-height: 400px; 
+            object-fit: contain; 
+            border-radius: 15px;
+            border: 3px solid var(--kitty-pink-main);
+            margin-bottom: 15px;
+        }
+
+        .escondido {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        
+        main {
+            max-width: 800px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: var(--kitty-red);
+            text-align: center;
+            text-shadow: 2px 2px white;
+        }
+
+        .controles {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            border: 3px solid var(--kitty-pink-main);
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid var(--kitty-pink-main);
+            width: 60px;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: var(--kitty-red);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background-color: #ff3366;
+        }
+
+        #texto-exibicao {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            border: 2px dashed var(--kitty-pink-main);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            background-color: var(--kitty-yellow);
+            border-bottom: 2px solid var(--kitty-red);
+            padding: 2px;
+            border-radius: 4px;
+        }
+
+        #resultado-lista {
+            background: white;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 15px;
+            border-left: 8px solid var(--kitty-pink-main);
+        }
+
+        ul { list-style-type: "🎀 "; padding-left: 30px; }
+    </style>
+</head>
+<body>
+
+    <div id="capa">
+        <div class="conteudo-capa">
+            <img src="MV5BNjhjODg3NTMtMzg0OS00ZDJiLWJkMWMtYTJkODcwMmYxNDY0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Hello Kitty Alice">
+            <h2 style="margin: 10px 0; color: var(--kitty-red);">Hello Kitty no País das Maravilhas</h2>
+            <button onclick="entrarNoSite()">Entrar na Aventura 🎀</button>
+        </div>
+    </div>
+
+    <main>
+        <h1>🎀 Analisador de Palavras 🎀</h1>
+
+        <div class="controles">
+            <label for="inputTamanho">Quantas letras procurar?</label>
+            <input type="number" id="inputTamanho" min="1" value="5">
+            <button onclick="processarTexto()">Analisar e Destacar!</button>
+        </div>
+
+        <div id="resultado-lista">
+            Escolha um número para ver a mágica acontecer!
+        </div>
+
+        <article id="texto-exibicao">
+            Era uma vez, em um cantinho tranquilo e cheio de flores coloridas, a Hello Kitty estava sentada sob uma árvore, segurando um livrinho que já não parecia tão interessante assim. Ela suspirou, olhando para o céu azul e se perguntando se existia algo mais divertido para fazer naquele dia.
+
+De repente, um coelhinho branco — usando um lacinho apressado e carregando um pequeno relógio — passou correndo bem na frente dela.
+
+— Estou atrasado! Muito atrasado! — dizia ele, sem nem perceber a Hello Kitty ali.
+
+Curiosa (porque, convenhamos, um coelho que usa relógio já é estranho o suficiente), Hello Kitty levantou rapidinho e decidiu segui-lo. O coelhinho entrou em um buraco entre as flores… e, sem pensar muito, ela foi atrás.
+
+Só que o buraco não era um buraco qualquer.
+
+Ela começou a cair… cair… cair… mas não estava com medo. Pelo contrário, era tudo tão bonito! Enquanto descia lentamente, ela via prateleiras cheias de laços, xícaras de chá flutuando, cupcakes girando no ar e até ursinhos de pelúcia acenando para ela.
+
+— Uau… que lugar mágico! — disse, girando suavemente enquanto caía.
+
+Depois de um tempo (que parecia muito, mas ao mesmo tempo nem tanto), ela finalmente aterrissou — bem de leve — em um chão fofinho, como se fosse feito de algodão doce.
+
+Na sua frente, havia uma portinha minúscula. Pequena demais até para ela passar.
+
+Ao lado, uma mesinha com uma garrafinha delicada que dizia: “Beba-me 💕”.
+
+Hello Kitty, sempre educada mas também curiosa, checou se não tinha nada estranho… e deu um golinho.
+
+De repente… ela começou a diminuir! Diminuir! Diminuir!
+
+— Ah! Agora sim! — disse, sorrindo ao perceber que já tinha o tamanho perfeito para passar pela portinha.
+
+Ao atravessá-la, ela entrou em um jardim ainda mais encantador do que qualquer coisa que já tinha visto. Flores que cantavam, nuvens em formato de laço, e um chá sendo servido por um chapeleiro muito animado (e um pouco confuso).
+
+— Bem-vinda! — disse ele, colocando uma xícara na frente dela. — Aqui, o tempo não importa… só o chá!
+
+Hello Kitty sorriu, ajeitou seu lacinho e se sentou.
+
+Talvez aquele não fosse um dia comum mesmo… e tudo bem.
+
+Porque, às vezes, os caminhos mais estranhos levam aos lugares mais mágicos. 💖
+
+        </article>
+    </main>
+
+    <script>
+        const textoBase = document.getElementById('texto-exibicao').innerText;
+
+        function entrarNoSite() {
+            document.getElementById('capa').classList.add('escondido');
+        }
+
+        function processarTexto() {
+            const tamanho = parseInt(document.getElementById('inputTamanho').value);
+            const areaTexto = document.getElementById('texto-exibicao');
+            const painelResultado = document.getElementById('resultado-lista');
+
+            if (!tamanho || tamanho <= 0) return alert("Digite um número maior que zero!");
+
+            const regexLimpeza = /[a-zA-Zà-úÀ-Ú]+/g;
+            const palavrasEncontradas = textoBase.match(regexLimpeza);
+
+            if (!palavrasEncontradas) return;
+
+            const contagem = {};
+            const listaDestaque = [];
+
+            palavrasEncontradas.forEach(p => {
+                if (p.length === tamanho) {
+                    const low = p.toLowerCase();
+                    contagem[low] = (contagem[low] || 0) + 1;
+                    if (!listaDestaque.includes(p)) listaDestaque.push(p);
+                }
+            });
+
+            let novoTexto = textoBase;
+            listaDestaque.forEach(p => {
+                const regexDinamico = new RegExp(`\\b${p}\\b`, 'gi');
+                novoTexto = novoTexto.replace(regexDinamico, (match) => `<mark class="highlight">${match}</mark>`);
+            });
+
+            areaTexto.innerHTML = novoTexto;
+
+            let htmlResult = `<strong>Palavras com ${tamanho} letras:</strong><ul>`;
+            const keys = Object.keys(contagem);
+            
+            if(keys.length === 0) {
+                painelResultado.innerHTML = "Puxa! Não achei nenhuma palavra desse tamanho. 🎀";
+            } else {
+                keys.forEach(k => {
+                    htmlResult += `<li>A palavra "${k}" aparece ${contagem[k]}x</li>`;
+                });
+                htmlResult += `</ul>`;
+                painelResultado.innerHTML = htmlResult;
+            }
+        }
+    </script>
+</body>
+</html>
